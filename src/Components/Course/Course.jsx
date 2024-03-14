@@ -1,7 +1,9 @@
 import React from "react";
 
-const Course = ({ item , handelTitle}) => {
+const Course = ({ item , handelTitle,}) => {
+
   const { id, title, description, photo, price, time } = item;
+
   return (
     <div className="card card-compact w-[340px] bg-base-100 shadow-xl px-4 py-4">
       <figure>
@@ -31,10 +33,10 @@ const Course = ({ item , handelTitle}) => {
               />
             </svg>
 
-            <p>Price : {price}</p>
+            <p className="text-[16px] opacity-90 font-medium">Price : {price}</p>
           </div>
           <div className="flex gap-2 items-center">
-           <span className="cursor-pointer">
+           <span  className="cursor-pointer">
             <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -51,7 +53,7 @@ const Course = ({ item , handelTitle}) => {
                 </svg>
            </span>
 
-            <p>Cradit : {time}</p>
+            <p className="text-[16px] opacity-90 font-medium">Cradit : {time}</p>
           </div>
         </div>
 
@@ -59,6 +61,7 @@ const Course = ({ item , handelTitle}) => {
           <button onClick={() => handelTitle(item)} className="btn w-full btn-primary border-none text-xl font-semibold bg-[#2F80ED]">
             Select
           </button>
+          
         </div>
       </div>
     </div>
